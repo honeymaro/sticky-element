@@ -1,0 +1,119 @@
+@media screen {
+    * {
+        margin: 0px;
+        outline: none;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    /* dd, */
+    a,
+    abbr,
+    acronym,
+    address,
+    applet,
+    b,
+    big,
+    blockquote,
+    body,
+    button,
+    caption,
+    center,
+    cite,
+    code,
+    del,
+    dfn,
+    div,
+    dl,
+    dt,
+    em,
+    fieldset,
+    font,
+    footer,
+    form,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    header,
+    html,
+    i,
+    iframe,
+    img,
+    ins,
+    kbd,
+    label,
+    legend,
+    li,
+    nav,
+    object,
+    ol,
+    p,
+    pre,
+    q,
+    s,
+    samp,
+    section,
+    small,
+    span,
+    strike,
+    strong,
+    sub,
+    sup,
+    table,
+    tbody,
+    td,
+    tfoot,
+    th,
+    thead,
+    title,
+    tr,
+    tt,
+    u,
+    ul,
+    var {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        vertical-align: baseline;
+        background: 0 0;
+    }
+    dd {
+        margin: unset;
+        margin-left: 40px;
+    }
+    img {
+        border: none;
+    }
+    textarea {
+        resize: none;
+    }
+    html {
+        height: 100%;
+        width: 100%;
+        padding: 0px;
+    }
+    /* body * {
+        overflow: hidden;
+    } */
+    body {
+        margin: 0px;
+        /* padding: 60px 0 0 0; */
+        height: 100%;
+        width: 100%;
+        font-family: sans-serif;
+        font-size: 16px;
+        overflow-x: hidden;
+        background-color: #ffffff;
+    }
+    .section{
+        width: 100%;
+        height: auto;
+        position: relative;
+        
+    }
+}
