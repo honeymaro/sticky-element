@@ -14,12 +14,34 @@
     <div class="section" style="height: 100%; background-color: #c72843;"></div>
 
     <div class="section" style="height: 120%; background-color: #efefef;">
-        <div style="height: 50%;">
-            <div class="m-sticky" style="position: absolute; left: 30px; top: 101px; width: 100px; height: 100px; background-color: red;"></div>
+        <div style="height: 50%; position: relative;">
+            <div class="m-sticky test1" style="position: absolute; left: 30px; top: 101px; width: 100px; height: 100px; background-color: red;"></div>
+        </div>
+        <div style="height: 50%; position: relative;">
+            <div class="m-sticky test2" style="position: absolute; left: 30px; top: 101px; width: 100px; height: 100px; background-color: blueviolet;">
+                Hello
+            </div>
         </div>
     </div>
     <div class="section" style="height: 100%; background-color: #c72843;"></div>
     <script src="../src/sticky.js"></script>
+    <script>
+        var sticky = new Maro.sticky();
+        sticky.add({
+            element: $(".test2")[0],
+            callback: function (e) {
+                if (e.status == "before") {
+                    $(e.element).css("left", 30);
+                }
+                else if (e.status == "during") {
+                    $(e.element).css("left", 30 + e.percent * 100);
+                }
+                else if (e.status == "after") {
+
+                }
+            }
+        })
+    </script>
 </body>
 
 </html>

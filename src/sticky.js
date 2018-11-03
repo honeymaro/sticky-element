@@ -6,9 +6,7 @@ Maro.sticky = (function () {
     var _stickies = [];
     var _add = function (data) {
         data.element = data.element;
-        data.parent = data.parent ? data.parent : $(element).parent();
-        // data.from = data.from ? data.from : $(data.parent).offset().top;
-        // data.to = data.to ? data.to : $(data.parent).offset().top + $(data.parent).height();
+        data.parent = data.parent ? data.parent : $(data.element).parent();
         // TODO Callback before, during, after로 나누기
         data.callback = data.callback ? data.callback : function () { };
         console.log(data);
@@ -43,9 +41,10 @@ Maro.sticky = (function () {
                 $(e.element).css("position", "absolute");
                 $(e.element).css("margin-top", "");
             }
+            console.log(e);
         }
 
-        _stickies.push({
+        _add({
             element,
             parent,
             callback
@@ -60,7 +59,7 @@ Maro.sticky = (function () {
 
             for (i = 0; i < _stickies.length; i++) {
                 var parent = $(_stickies[i].parent);
-                var sticky = $(_stickies[i].element);
+                var element = $(_stickies[i].element);
 
                 var from = $(parent).offset().top;
                 var to = $(parent).offset().top + $(parent).height();
@@ -97,6 +96,3 @@ Maro.sticky = (function () {
         remove: _remove
     }
 });
-
-
-new Maro.sticky();
